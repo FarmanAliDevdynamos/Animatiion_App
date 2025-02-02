@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:futteranimations_app/configs/themes.dart';
 import 'package:futteranimations_app/pages/hompage.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Animation App',
-      theme: lighttheme,
+      theme: lightTheme,
       home: Homepage(),
     );
   }
