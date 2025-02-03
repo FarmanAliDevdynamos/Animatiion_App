@@ -21,39 +21,41 @@ class _HomepageState extends State<Homepage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            ListTile(
-              onTap: () {
-                Get.to(() => AnimatedContainerPage());
-              },
-              tileColor: Colors.white,
-              title: const Text('Animated Container'),
-              leading: Icon(Icons.add_box),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              onTap: () {
-                Get.to(() => AnimatedOpacityPage());
-              },
-              tileColor: Colors.white,
-              title: const Text('Animated Opacity'),
-              leading: Icon(Icons.color_lens),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              onTap: () {
-                Get.to(() => AnimatedPaddingPage());
-              },
-              tileColor: Colors.white,
-              title: const Text('Animated Padding'),
-              leading: Icon(Icons.spa_outlined),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedContainerPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Container'),
+                leading: Icon(Icons.add_box),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedOpacityPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Opacity'),
+                leading: Icon(Icons.color_lens),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedPaddingPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Padding'),
+                leading: Icon(Icons.spa_outlined),
+              )
+            ],
+          ),
         ),
       ),
     );
