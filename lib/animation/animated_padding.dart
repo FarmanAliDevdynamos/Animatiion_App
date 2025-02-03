@@ -52,7 +52,7 @@ class AnimatedPaddingPage extends StatelessWidget {
                 },
                 tileColor: Colors.white,
                 title: const Text('Example 1'),
-                leading: Icon(Icons.spa_outlined),
+                leading: Icon(Icons.padding_outlined),
               ),
               SizedBox(
                 height: 10,

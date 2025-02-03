@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:futteranimations_app/animation/animated_align.dart';
 import 'package:futteranimations_app/animation/animated_container.dart';
 import 'package:futteranimations_app/animation/animated_opacity.dart';
 import 'package:futteranimations_app/animation/animated_padding.dart';
@@ -52,8 +53,19 @@ class _HomepageState extends State<Homepage> {
                 },
                 tileColor: Colors.white,
                 title: const Text('Animated Padding'),
-                leading: Icon(Icons.spa_outlined),
-              )
+                leading: Icon(Icons.padding_outlined),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedAlignPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Align'),
+                leading: Icon(Icons.align_horizontal_left),
+              ),
             ],
           ),
         ),
