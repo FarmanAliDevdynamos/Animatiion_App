@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:futteranimations_app/examples/animated_container_example.dart';
 import 'package:get/get.dart';
 
-class AnimatedContainerPage extends StatelessWidget {
-  const AnimatedContainerPage({super.key});
+class AnimatedContainerExample extends StatelessWidget {
+  const AnimatedContainerExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +31,18 @@ class AnimatedContainerPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(radius.value),
                     border: Border.all(
                         color: Colors.deepPurple, width: width.value),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://i.postimg.cc/yYqFKNkz/download.jpg'), // Replace with your image URL
+                      fit: BoxFit.cover,
+                    ),
+                    //  borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
               SizedBox(height: 30),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
                     onPressed: () {
@@ -49,20 +54,20 @@ class AnimatedContainerPage extends StatelessWidget {
                     },
                     child: Text('Size'),
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (color.value == Colors.white) {
-                        color.value = Colors.orange;
-                      }
-                      // else if (color.value == Colors.orange) {
-                      //   color.value = Colors.green;
-                      // }
-                      else {
-                        color.value = Colors.white;
-                      }
-                    },
-                    child: Text('Color'),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     if (color.value == Colors.white) {
+                  //       color.value = Colors.orange;
+                  //     }
+                  //     // else if (color.value == Colors.orange) {
+                  //     //   color.value = Colors.green;
+                  //     // }
+                  //     else {
+                  //       color.value = Colors.white;
+                  //     }
+                  //   },
+                  //   child: Text('Color'),
+                  // ),
                   ElevatedButton(
                     onPressed: () {
                       if (radius.value == 100) {
@@ -85,38 +90,24 @@ class AnimatedContainerPage extends StatelessWidget {
                   ),
                 ],
               ),
-              // ElevatedButton(
-              //   onPressed: () {
-              //     if (size.value == 300 &&
-              //         width.value == 7 &&
-              //         radius.value == 100 &&
-              //         color.value == Colors.white) {
-              //       width.value = 0;
-              //       radius.value = 0;
-              //       color.value = Colors.orange;
-              //       size.value = 200;
-              //     } else {
-              //       width.value = 7;
-              //       radius.value = 100;
-              //       color.value = Colors.white;
-              //       size.value = 300;
-              //     }
-              //   },
-              //   child: Text('All Animation'),
-              // ),
-              SizedBox(
-                height: 70,
-              ),
-              ListTile(
-                onTap: () {
-                  Get.to(() => AnimatedContainerExample());
+              ElevatedButton(
+                onPressed: () {
+                  if (size.value == 300 &&
+                      width.value == 7 &&
+                      radius.value == 100 &&
+                      color.value == Colors.white) {
+                    width.value = 0;
+                    radius.value = 0;
+                    color.value = Colors.orange;
+                    size.value = 200;
+                  } else {
+                    width.value = 7;
+                    radius.value = 100;
+                    color.value = Colors.white;
+                    size.value = 300;
+                  }
                 },
-                tileColor: Colors.white,
-                title: const Text('Example 1'),
-                leading: Icon(Icons.add_box),
-              ),
-              SizedBox(
-                height: 10,
+                child: Text('All Animation'),
               ),
             ],
           ),
