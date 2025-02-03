@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:futteranimations_app/examples/animated_padding.dart';
 import 'package:get/get.dart';
 
-class AnimatedPaddingPage extends StatelessWidget {
-  const AnimatedPaddingPage({super.key});
+class AnimatedPaddingExample extends StatelessWidget {
+  const AnimatedPaddingExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,15 @@ class AnimatedPaddingPage extends StatelessWidget {
                       child: Container(
                         width: 200,
                         height: 200,
-                        color: Colors.deepPurple,
+                        // color: Colors.deepPurple,
+                        decoration: BoxDecoration(
+                          image: const DecorationImage(
+                            image: NetworkImage(
+                                'https://i.postimg.cc/yYqFKNkz/download.jpg'), // Replace with your image URL
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                   )),
@@ -43,20 +50,6 @@ class AnimatedPaddingPage extends StatelessWidget {
                     }
                   },
                   child: Text('Padding 40')),
-              SizedBox(
-                height: 70,
-              ),
-              ListTile(
-                onTap: () {
-                  Get.to(() => AnimatedPaddingExample());
-                },
-                tileColor: Colors.white,
-                title: const Text('Example 1'),
-                leading: Icon(Icons.color_lens),
-              ),
-              SizedBox(
-                height: 10,
-              ),
             ],
           ),
         ),
