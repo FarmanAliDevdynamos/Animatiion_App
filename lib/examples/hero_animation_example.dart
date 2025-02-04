@@ -19,14 +19,14 @@ class HeroAnimationExample extends StatelessWidget {
                 height: 200,
                 width: 350,
                 decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      //color: Colors.black26,
-                      blurRadius: 8,
-                      offset: Offset(2, 4),
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.black26,
+                    //     blurRadius: 8,
+                    //     offset: Offset(2, 4),
+                    //   ),
+                    // ],
                     ),
-                  ],
-                ),
                 child: Hero(
                   tag: "Api",
                   child: Image.network(

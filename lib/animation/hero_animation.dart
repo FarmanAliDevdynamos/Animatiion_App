@@ -19,24 +19,26 @@ class HeroAnimationPage extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                Get.to(HeroAnimationExample(), duration: Duration(seconds: 1));
+                Get.to(HeroAnimationExample(),
+                    duration: Duration(seconds: 1),
+                    transition: Transition.fadeIn);
               },
               child: Row(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(12), // Rounded corners
+                    borderRadius: BorderRadius.circular(12),
                     child: Container(
                       height: 180,
                       width: 180,
                       decoration: const BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 8,
-                            offset: Offset(2, 4),
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: Colors.black26,
+                          //     blurRadius: 8,
+                          //     offset: Offset(2, 4),
+                          //   ),
+                          // ],
                           ),
-                        ],
-                      ),
                       child: Hero(
                         tag: "Api",
                         child: Image.network(
