@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:futteranimations_app/animation/animated_align.dart';
 import 'package:futteranimations_app/animation/animated_container.dart';
+import 'package:futteranimations_app/animation/animated_list.dart';
 import 'package:futteranimations_app/animation/animated_opacity.dart';
 import 'package:futteranimations_app/animation/animated_padding.dart';
 import 'package:futteranimations_app/animation/animated_switcher.dart';
@@ -77,6 +78,17 @@ class _HomepageState extends State<Homepage> {
                 tileColor: Colors.white,
                 title: const Text('Animated Switcher'),
                 leading: Icon(Icons.swipe_left),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedListPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Position'),
+                leading: Icon(Icons.polymer_sharp),
               ),
             ],
           ),
