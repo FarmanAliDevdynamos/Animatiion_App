@@ -3,6 +3,7 @@ import 'package:futteranimations_app/animation/animated_align.dart';
 import 'package:futteranimations_app/animation/animated_container.dart';
 import 'package:futteranimations_app/animation/animated_opacity.dart';
 import 'package:futteranimations_app/animation/animated_padding.dart';
+import 'package:futteranimations_app/animation/animated_switcher.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -65,6 +66,17 @@ class _HomepageState extends State<Homepage> {
                 tileColor: Colors.white,
                 title: const Text('Animated Align'),
                 leading: Icon(Icons.align_horizontal_left),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.to(() => AnimatedSwitcherPage());
+                },
+                tileColor: Colors.white,
+                title: const Text('Animated Switcher'),
+                leading: Icon(Icons.swipe_left),
               ),
             ],
           ),
