@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:futteranimations_app/examples/animated_align_example.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 class AnimatedAlignExample extends StatelessWidget {
   const AnimatedAlignExample({super.key});
@@ -19,7 +17,7 @@ class AnimatedAlignExample extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(10),
+              // padding: EdgeInsets.all(10),
               height: 400,
               width: 400,
               color: Colors.deepPurple.shade200,

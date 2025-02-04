@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futteranimations_app/examples/animated_align_example.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 class AnimatedAlignPage extends StatelessWidget {
   const AnimatedAlignPage({super.key});
