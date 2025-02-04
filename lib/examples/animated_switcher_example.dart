@@ -104,7 +104,7 @@ class AnimatedSwitcherExample extends StatelessWidget {
                 Obx(
                   () => AnimatedSwitcher(
                     duration: const Duration(milliseconds: 1000),
-                    switchInCurve: Curves.easeInOut,
+                    switchInCurve: Curves.decelerate,
                     transitionBuilder: (child, animation) {
                       return FadeTransition(
                         opacity: animation,
